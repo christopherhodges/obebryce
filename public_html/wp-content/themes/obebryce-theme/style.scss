@@ -1,0 +1,36 @@
+/*
+Theme Name: TARDIS
+Theme URI: http://sparkexperience.com
+Author: SPARK Experience
+Author URI: http://sparkexperience.com
+Description: Base WordPress theme created by SPARK Experience.
+Version:      1.0.0
+*/
+
+// Reset
+@import 'css/reset.scss';
+
+// Config file ( mixins, variables, global animations )
+@import 'css/config.scss';
+
+// Typography ( all the base font items - families, sizes, paddings, line-heights, etc. )
+@import 'css/typography.scss';
+
+// Layout ( grid, wrappers, etc - including mdeia queries )
+@import 'css/layout.scss';
+@import 'css/header.scss';
+@import 'css/front-page.scss';
+
+// Globals ( any classes or elements that are commonly used, like .button or .icon )
+@import 'css/globals.scss';
+
+// Modules ( anything shared cross template )
+@import 'modules/hamburger/css/hamburger.css';
+@import 'modules/hgroup/css/hgroup.scss';
+
+// Templates ( template-name.scss - including media queries. You can override base module styles here too )
+@import 'css/template-default.scss';
+
+// Custom ( don't use this unless you have to. This is for anything that doesnt fit anywhere else, which should be nothing )
+@import 'css/custom.scss';
+

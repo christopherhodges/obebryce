@@ -1,0 +1,80 @@
+// Sizes
+$base-font-size: 16px;
+$ratio: 1.414;
+
+// Colors
+$darkest: #100401;
+$darker: #111111;
+$dark: #333;
+$gr: #39D160;
+$or: #FFB54A;
+$bl: #54A8E2;
+$pi: #FF33CF;
+$pu: #A5238C;
+
+// Fonts
+
+$font-primary: 'Yantramanav', sans-serif;
+
+.thin {
+	font-family: 'Yantramanav', sans-serif;
+	font-weight: 100;
+}
+
+.light {
+	font-family: 'Yantramanav', sans-serif;
+	font-weight: 300;
+}
+
+.medium {
+	font-family: 'Yantramanav', sans-serif;
+	font-weight: 500;
+}
+
+.bold {
+	font-family: 'Yantramanav', sans-serif;
+	font-weight: 700;
+}
+
+.ultra {
+	font-family: 'Yantramanav', sans-serif;
+	font-weight: 900
+}
+
+// Functions
+@function trem( $px_value ) {
+    @return ( $px_value / $base-font-size ) + rem
+}
+
+// Mixins
+@mixin transform( $transforms ) {
+	   -moz-transform: $transforms;
+	     -o-transform: $transforms;
+	    -ms-transform: $transforms;
+	-webkit-transform: $transforms;
+            transform: $transforms;
+}
+
+@mixin transform-origin( $origin ) {
+	   -moz-transform-origin: $origin;
+	     -o-transform-origin: $origin;
+	    -ms-transform-origin: $origin;
+	-webkit-transform-origin: $origin;
+            transform-origin: $origin;
+}
+
+@mixin transform-perspective( $perspective ) {
+	   -moz-transform-perspective: $perspective;
+	     -o-transform-perspective: $perspective;
+	    -ms-transform-perspective: $perspective;
+	-webkit-transform-perspective: $perspective;
+            transform-perspective: $perspective;
+}
+
+@mixin transition( $transition-property, $transition-time, $method ) {
+    -webkit-transition: $transition-property $transition-time $method;
+       -moz-transition: $transition-property $transition-time $method;
+        -ms-transition: $transition-property $transition-time $method;
+         -o-transition: $transition-property $transition-time $method;
+            transition: $transition-property $transition-time $method;
+}

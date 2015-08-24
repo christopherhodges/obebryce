@@ -1,0 +1,99 @@
+#header {
+	z-index: 1;
+	padding: 1.8rem 0 1.3rem;
+	background: rgba(0, 0, 0, .8);
+	margin-top: -.7rem;
+	transition: all .35s ease 0s;
+	opacity: 0;
+	transform: translate3d(0, -5rem, 0);
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background: $darkest;
+	@extend .group;
+	&.loaded {
+		opacity: 1;
+		transform: translate3d(0,0,0);
+	}
+	&.scrolled {
+		padding: .5rem 0;
+		transition: all .35s ease 0s;
+		margin-top: .2rem;
+		.logo {
+			svg {
+				width: 100px;
+			}
+		}
+		&:before {
+			top: -.29rem;
+		}
+		.nav {
+			li {
+				a {
+					font-size: .7rem;
+				}
+			}
+		}
+	}
+	&:before {
+		background: url("images/pattern-main.png");
+		background-size: 150%;
+		background-position: center;
+		width: 100%;
+		height: .3rem;
+		position: absolute;
+		content: "";
+		top: .7rem;;
+		transition: all .35s ease 0s;
+	}
+	.logo, .nav {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.logo {
+		width: 12%;
+	}
+	svg {
+		transition: all .67s ease 0s;
+		width: 165px;
+		height: 57px;
+		fill: #333;
+		&:hover {
+			fill: #fff;
+		}
+	}
+	.nav {
+		width: 87%;
+		text-align: right;
+		li {
+			display: inline-block;
+			a {
+				@extend .light;
+				display: block;
+				color: #555;
+				text-transform: uppercase;
+				text-decoration: none;
+				font-size: .8rem;
+				padding-left: 1rem;
+				transition: all .57s ease 0s;
+				position: relative;
+				&:after {
+					background: #ccc;
+					display: block;
+					width: 0;
+					height: 1px;
+					color: white;
+					content: "";
+					transition: width .25s ease;
+					margin: .4rem auto 0;
+				}
+				&:hover {
+					color: #fff;
+					&:after {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}

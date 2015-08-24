@@ -1,0 +1,21 @@
+.page-heading {
+	padding: 7.06rem 0;
+	color: white;
+	text-transform: uppercase;
+	text-align: center;
+	span {
+		@extend .thin;
+		font-size: trem(17px);
+		font-style: italic;
+	    letter-spacing: .7rem;
+	}
+	h1 {
+		svg {
+			width: trem(560px);
+			text {
+				font-size: trem(100px);
+				font-weight: 900;
+			}
+		}
+	}
+}
